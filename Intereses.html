@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Finanzas</title>
+</head>
+<body>
+  <h1>Calculador de intereses</h1>
+  <main>
+    <form>
+      <fieldset>
+        <legend>Información del crédito</legend>
+        <label>
+          Ingrese su inversión presente (Si no cuenta con este dato coloque 0)
+          <input type="number" id="montoInicial">
+        </label>
+        <label>
+          Ingrese su inversión futura (Si no cuenta con este dato coloque 0)
+          <input type="number" id="montoFinal">
+        </label>
+        <label>
+          Ingrese el interes <b>puede colocarlo como porcentaje (si es el 10% coloque 0.10) o la cantidad (ej. 10,000)</b>
+          (Si no cuenta con este dato coloque 0)
+          <input type="number" id="intereses">
+        </label>
+        <p>Seleccione el tipo de interes</p>
+        <select id="tipoDeInteres">
+          <option value="compuesto">Compuesto</option>
+          <option value="simple">Simple</option>
+        </select>
+        <label>
+          Indique el numero de plazos que va a pagar
+          <input type="number" id="numeroDePlazos" placeholder="ej. 12 quincenas">
+        </label>
+        <input type="submit" value="Continuar" onclick="imprimir()">
+      </fieldset>
+      <div id="container"></div>
+    </form>
+  </main>
+  <script src="script.js"></script>
+ 
+</body>
+</html>
